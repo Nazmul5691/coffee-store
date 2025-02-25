@@ -1,14 +1,17 @@
 import AllCoffees from "./AllCoffees";
-import CardSections1 from "./CardSections1";
-import CardSections2 from "./CardSections2";
-import UpdateCoffee from "./UpdateCoffee";
+import Banner from "./HomeComponents/Banner";
+import CoffeeFeatures from "./HomeComponents/CoffeeFeatures";
+import FollowInstagram from "./HomeComponents/FollowInstagram";
 
 export default function Home() {
     return (
-        <div>
-            <CardSections1 />
+        <div className="flex flex-col gap-20">
+            <div>
+                <Banner />
+                <CoffeeFeatures />
+            </div>
             <AllCoffees />
-            <CardSections2 />
+            <FollowInstagram />
         </div>
     )
 }

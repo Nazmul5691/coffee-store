@@ -18,8 +18,8 @@ export default function Users() {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-            if (result.isConfirmed) {  // ✅ Only delete if user clicks "Yes"
-                fetch(`http://localhost:5000/users/${id}`, {
+            if (result.isConfirmed) { 
+                fetch(`https://coffee-store-server-blush-alpha.vercel.app/users/${id}`, {
                     method: "DELETE"
                 })
                 .then(res => res.json())
@@ -31,7 +31,6 @@ export default function Users() {
                             icon: "success"
                         });
     
-                        // ✅ Update the state to remove the deleted user
                         const remainingUsers = users.filter(user => user._id !== id);
                         setUsers(remainingUsers);
                     }
@@ -42,7 +41,7 @@ export default function Users() {
 
     return (
         <div>
-            <h1>Users: {users.length}</h1>
+            <h1 className="text-5xl font-rancho font-bold text-center py-10 "> All Users</h1>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -59,15 +58,13 @@ export default function Users() {
                     <tbody>
                         {/* row 1 */}
                         {
-                            users.map(user => <tr key={user._id}>
-                                <th>1</th>
+                            users.map((user, index) => <tr key={user._id}>
+                                <th>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{user.createdAt}</td>
                                 <td>{user.lastSignInTime}</td>
-                                {/* <td>
-                                    <button onClick={() => handleDelete(user._id)} className="btn">edit</button>
-                                </td> */}
+                               
                                 <td>
                                     <button onClick={() => handleDelete(user._id)} className="btn">X</button>
                                 </td>

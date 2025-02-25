@@ -18,6 +18,10 @@ import SignIn from './components/SignIn.jsx';
 import SignUp from './components/SignUp.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Users from './components/Users.jsx';
+import CoffeeDetails from './components/CoffeeDetails.jsx';
+
+
+
 
 
 
@@ -42,7 +46,12 @@ const router = createBrowserRouter([
       {
         path: "/updateCoffee/:id",
         element: <UpdateCoffee />,
-        loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffee-store-server-blush-alpha.vercel.app/coffee/${params.id}`),
+      },
+      {
+        path: "/coffeeDetails/:id",
+        element: <CoffeeDetails />,
+        loader: ({ params }) => fetch(`https://coffee-store-server-blush-alpha.vercel.app/coffee/${params.id}`),
       },
       {
         path: "/signIn",
@@ -55,12 +64,15 @@ const router = createBrowserRouter([
       {
         path: "/users",
         element: <Users />,
-        loader: () => fetch('http://localhost:5000/users'),
+        loader: () => fetch('https://coffee-store-server-blush-alpha.vercel.app/users'),
       }
     ]
   },
 
 ]);
+
+
+
 
 
 
@@ -73,23 +85,3 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-
-
-
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App></App>,
-//     loader: () => fetch('http://localhost:5000/coffee')
-//   },
-//   {
-//     path: "addCoffee",
-//     element: <AddCoffee />
-//   },
-//   {
-//     path: "/updateCoffee/:id",
-//     element: <UpdateCoffee />,
-//     loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
-//   },
-// ]);

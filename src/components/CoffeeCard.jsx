@@ -9,7 +9,7 @@ export default function CoffeeCard({ coffee, coffees, setCoffees }) {
     const { _id, name, supplier, taste, photo, price, chef, quantity } = coffee;
 
 
-    const handleDelete = _id =>{
+    const handleDelete = _id => {
         console.log(_id);
         Swal.fire({
             title: 'Are you sure?',
@@ -19,29 +19,29 @@ export default function CoffeeCard({ coffee, coffees, setCoffees }) {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-            
 
-            fetch(`http://localhost:5000/coffee/${_id}`, {
-                method: 'DELETE'
-            })
-             .then(res => res.json())
-             .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0){
-                    Swal.fire(
-                            'Deleted!',
-                            'Your Coffee has been deleted.',
-                            'success'
-                    )
-                    const remaining = coffees.filter(cof => cof._id !== _id)
-                    setCoffees(remaining)
-                }
-             })
-            
+
+                fetch(`https://coffee-store-server-blush-alpha.vercel.app/coffee/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Coffee has been deleted.',
+                                'success'
+                            )
+                            const remaining = coffees.filter(cof => cof._id !== _id)
+                            setCoffees(remaining)
+                        }
+                    })
+
             }
-          })
+        })
     }
 
 
@@ -65,9 +65,14 @@ export default function CoffeeCard({ coffee, coffees, setCoffees }) {
 
             {/* Action Buttons */}
             <div className="flex flex-col space-y-2">
-                <button className="btn bg-gray-200 p-2 rounded-lg">
+                <Link to={`/coffeeDetails/${_id}`}>
+                    <button className="btn bg-gray-200 p-2 rounded-lg">
+                        <FaEye className="h-5 w-5 text-gray-700" />
+                    </button>
+                </Link>
+                {/* <button className="btn bg-gray-200 p-2 rounded-lg">
                     <FaEye className="h-5 w-5 text-gray-700" />
-                </button>
+                </button> */}
                 <Link to={`/updateCoffee/${_id}`}>
                     <button className="btn bg-gray-300 p-2 rounded-lg">
                         <BsPencilSquare className="h-5 w-5 text-gray-800" />
