@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
-        <div className="pt-20">
+        <div className="">
             {/* Top Footer */}
-            <footer className="footer px-24 bg-gray-900 text-gray-200 p-10">
+            <footer className="footer px-6 lg:px-24 bg-gray-900 text-gray-200 p-10">
                 <nav>
                     <h6 className="footer-title text-lg text-white">Our Offerings</h6>
                     <a className="link link-hover">Signature Blends</a>
@@ -27,7 +27,7 @@ const Footer = () => {
             </footer>
 
             {/* Bottom Footer */}
-            <footer className="footer px-24 bg-gray-800 text-gray-300 border-t border-gray-700 py-4">
+            <footer className="footer px-6 lg:px-24 bg-gray-800 text-gray-300 border-t border-gray-700 py-4">
                 <aside className="grid-flow-col items-center">
                     <div className="w-28">
                         <h1 className="font-rancho font-bold text-3xl text-white">Espresso Premium</h1>

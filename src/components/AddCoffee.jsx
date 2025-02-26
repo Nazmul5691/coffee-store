@@ -45,13 +45,13 @@ export default function AddCoffee() {
 
 
     return (
-        <div className="bg-[#F4F3F0] h-screen flex items-center justify-center">
-            <div className="group mx-auto flex w-full max-w-xl border border-blue-400 bg-white text-blue-400 shadow-lg dark:bg-zinc-900">
+        <div className="bg-[#F4F3F0] py-20 lg:px-0 px-10 flex items-center justify-center">
+            <div className="group mx-auto flex w-full max-w-xl border border-blue-400 bg-white rounded-md text-blue-400 shadow-lg dark:bg-zinc-900">
                 <form onSubmit={handleAddCoffee} className="flex-1 p-8">
                     <h1 className="pb-6 text-xl font-semibold tracking-tight">Add Coffee</h1>
                     <div className="space-y-4">
                         {/* Name Field quantity row */}
-                        <div className=" flex gap-3">
+                        <div className=" lg:flex lg:gap-3">
                             {/* Name Field */}
                             <div className="w-full">
                                 <p className="text-black pb-[10px]">Coffee Name</p>
@@ -74,7 +74,7 @@ export default function AddCoffee() {
                                 </div>
                             </div>
                             {/* Quantity Field */}
-                            <div className="w-full">
+                            <div className="w-full lg:pt-0 pt-4">
                                 <p className="text-black pb-[10px]">Available Quantity</p>
                                 <div className="relative text-sm">
                                     <input
@@ -97,7 +97,7 @@ export default function AddCoffee() {
 
 
                         {/* Supplier Field quantity row */}
-                        <div className=" flex gap-3">
+                        <div className=" lg:flex gap-3">
                             {/* Supplier Field */}
                             <div className="w-full">
                                 <p className="text-black pb-[10px]">Supplier</p>
@@ -120,7 +120,7 @@ export default function AddCoffee() {
                                 </div>
                             </div>
                             {/* Taste Field */}
-                            <div className="w-full">
+                            <div className="w-full lg:pt-0 pt-4">
                                 <p className="text-black pb-[10px]">Taste</p>
                                 <div className="relative text-sm">
                                     <input
@@ -142,7 +142,7 @@ export default function AddCoffee() {
                         </div>
 
                         {/* Category Field Details row */}
-                        <div className=" flex gap-3">
+                        <div className=" lg:flex gap-3">
                             {/* Category Field */}
                             <div className="w-full">
                                 <p className="text-black pb-[10px]">Category</p>
@@ -165,7 +165,7 @@ export default function AddCoffee() {
                                 </div>
                             </div>
                             {/* Details Field */}
-                            <div className="w-full">
+                            <div className="w-full lg:pt-0 pt-4">
                                 <p className="text-black pb-[10px]">Details</p>
                                 <div className="relative text-sm">
                                     <input

@@ -34,7 +34,7 @@ export default function SignIn() {
                 })
                 .catch((error) => console.error("Error updating user:", error));
 
-                // Redirect to previous page or home after login
+                
                 navigate(from, { replace: true });
             })
             .catch((error) => {
@@ -43,12 +43,10 @@ export default function SignIn() {
     };
 
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Sign In</h1>
-                </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="hero h-screen bg-base-200">
+            <div className="hero-content">
+                
+                <div className="card flex-shrink-0 lg:w-[350px] shadow-2xl bg-base-100">
                     <form onSubmit={handleSignIn} className="card-body">
                         <div className="form-control">
                             <label className="label">

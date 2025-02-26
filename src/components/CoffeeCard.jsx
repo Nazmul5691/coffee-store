@@ -48,7 +48,7 @@ export default function CoffeeCard({ coffee, coffees, setCoffees }) {
     return (
         <div className="flex items-center bg-base-100 shadow-xl p-4 rounded-lg">
             {/* Coffee Image */}
-            <figure className="w-40 h-40">
+            <figure className="lg:w-40 w-20 h-20 lg:h-40">
                 <img
                     src={photo}
                     alt="Coffee"
@@ -58,7 +58,7 @@ export default function CoffeeCard({ coffee, coffees, setCoffees }) {
 
             {/* Coffee Details */}
             <div className="ml-4 flex-1">
-                <h2 className="text-lg font-semibold"> <span className="font-bold">Name:</span> {name} </h2>
+                <h2 className="lg:text-lg font-semibold"> <span className="font-bold">Name:</span> {name} </h2>
                 <p className="text-gray-600"> <span className="font-semibold">Available Quantity:</span> {quantity} </p>
                 <p className="text-gray-700 font-semibold"> <span className="font-bold">Taste:</span> {taste} </p>
             </div>

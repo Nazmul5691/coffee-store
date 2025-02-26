@@ -36,10 +36,10 @@ export default function FollowInstagram() {
     ]
 
     return (
-        <div className="max-w-6xl mx-auto space-y-5">
+        <div className="max-w-6xl mx-auto lg:px-0 px-10 space-y-5 pb-20">
             <div className="flex flex-col gap-2">
                 <p className="text-center">Follow Us Now</p>
-                <h1 className='font-rancho text-6xl text-center text-purple-600 '>
+                <h1 className='font-rancho text-3xl lg:text-6xl text-center text-purple-600 '>
                     Follow on Instagram
                 </h1>
             </div>

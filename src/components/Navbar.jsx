@@ -72,34 +72,34 @@ export default function NavBar(){
                     <line x1="4" x2="20" y1="18" y2="18" />
                 </svg>
                 {dropDownState && (
-                    <ul className="z-10 gap-2 bg-[#393E46] absolute right-0 top-11 flex w-[200px] flex-col rounded-lg text-base">
+                    <ul className="z-10 p-5  gap-2 bg-[#393E46] absolute right-0 top-11 flex w-[200px] flex-col rounded-lg text-base">
                         <NavLink
                             to="/"
-                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-black"}>
+                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-white"}>
                             Home
                         </NavLink>
 
                         <NavLink
                             to="/addCoffee"
-                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-black"}>
+                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-white"}>
                             Add Coffee
                         </NavLink>
 
                         <NavLink
                             to="/updateCoffeePage"
-                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-black"}>
+                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-white"}>
                             Update Coffee
                         </NavLink>
 
                         <NavLink
                             to="/users"
-                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-black"}>
+                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-white"}>
                             Users
                         </NavLink>
 
                         <NavLink
                             to="/signin"
-                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-black"}>
+                            className={({ isActive }) => isActive ? "text-blue-700 font-bold underline" : "text-white"}>
                             Sign In
                         </NavLink>
 

@@ -40,9 +40,9 @@ export default function Users() {
     };
 
     return (
-        <div>
-            <h1 className="text-5xl font-rancho font-bold text-center py-10 "> All Users</h1>
-            <div className="overflow-x-auto">
+        <div className="lg:p-10 p-5 bg-base-200">
+            <h1 className="lg:text-5xl text-3xl font-rancho font-bold text-center pb-5 lg:pb-10 text-purple-600 "> All Users</h1>
+            <div className="overflow-x-auto bg-white rounded-md">
                 <table className="table">
                     {/* head */}
                     <thead>

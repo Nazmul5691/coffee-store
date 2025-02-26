@@ -20,7 +20,7 @@ export default function AllCoffees() {
         <div className="space-y-8">
             <div className="flex flex-col gap-4">
                 <p className="text-center">--- Sip & Savor ---</p>
-                <h1 className='font-rancho text-6xl text-center text-purple-600 '>
+                <h1 className='font-rancho text-3xl lg:text-6xl text-center text-purple-600 '>
                     Our Popular Products
                 </h1>
                 <div className="flex items-center justify-center">
@@ -31,7 +31,7 @@ export default function AllCoffees() {
                     </Link>
                 </div>
             </div>
-            <div className='grid md:grid-cols-2 gap-4 max-w-5xl mx-auto'>
+            <div className='grid md:grid-cols-2 gap-4 lg:px-0 px-10 max-w-5xl mx-auto'>
                 {
                     coffees.map(coffee => (
                         <CoffeeCard
