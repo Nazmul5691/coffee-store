@@ -22,20 +22,20 @@ export default function CoffeeDetails() {
 
   return (
     <div
-      className="flex justify-center items-center h-screen bg-cover bg-center"
+      className="flex justify-center items-center bg-cover bg-center"
       style={{
         backgroundImage:
           "url('https://i.ibb.co.com/svMBbmDw/17.jpg')",
       }}
     >
-      <div className="bg-white p-8 rounded-lg shadow-xl max-w-xl w-full">
+      <div className=" my-10 lg:my-14 bg-white p-8 rounded-lg shadow-xl py-5 w-[300px] lg:max-w-xl lg:w-full ">
         <div className="text-center mb-6">
           <img
             src={coffee.photo}
             alt={coffee.name}
-            className="w-48 h-48 object-cover mx-auto p-3 rounded-md border-4 border-blue-600 mb-4"
+            className="lg:w-48 h-24 w-24 lg:h-48 object-cover mx-auto p-3 rounded-md border-4 border-blue-200 mb-4"
           />
-          <h2 className="font-rancho text-4xl font-semibold text-gray-800">{coffee.name}</h2>
+          <h2 className="font-rancho text-2xl lg:text-4xl font-semibold text-gray-800">{coffee.name}</h2>
         </div>
 
         <div className="text-lg font-rancho text-center text-gray-600 space-y-4">
